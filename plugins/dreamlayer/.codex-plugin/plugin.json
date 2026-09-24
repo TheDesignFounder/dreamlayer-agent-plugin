@@ -1,0 +1,19 @@
+{
+  "name": "dreamlayer",
+  "version": "0.1.0",
+  "description": "Generate images, logo concepts, product visuals and sprite animations for your project.",
+  "author": {
+    "name": "DreamLayer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DreamLayer",
+    "shortDescription": "Images and sprite workflows for your project.",
+    "longDescription": "Create images for logos, ecommerce, marketing, print artwork and games. Includes budget-aware recovery and local Godot and Unity import examples.",
+    "developerName": "DreamLayer",
+    "category": "Productivity",
+    "capabilities": ["Generate and edit images", "Create raster logo concepts", "Create reference-based sprite animations"],
+    "defaultPrompt": "Create an image for my project with DreamLayer within my credit budget."
+  },
+  "mcpServers": "./.mcp.json"
+}

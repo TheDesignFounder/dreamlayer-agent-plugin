@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+*.log
+.env
+.env.*
+!*.example
+__pycache__/
+*.pyc
+.godot/
+*.png.import
+*.gd.uid
+dist/

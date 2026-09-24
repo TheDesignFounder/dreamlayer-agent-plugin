@@ -1,0 +1,15 @@
+{
+  "name": "dreamlayer",
+  "owner": {
+    "name": "DreamLayer",
+    "email": "Mackenzie@dreamlayer.io"
+  },
+  "plugins": [
+    {
+      "name": "dreamlayer",
+      "source": "./plugins/dreamlayer",
+      "description": "Images, logo concepts, product visuals and sprite workflows for agents.",
+      "version": "0.1.0"
+    }
+  ]
+}

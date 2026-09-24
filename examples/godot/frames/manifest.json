@@ -1,0 +1,23 @@
+{
+  "frames": [
+    "walk_01",
+    "walk_02",
+    "walk_03",
+    "walk_04",
+    "walk_05",
+    "walk_06",
+    "walk_07"
+  ],
+  "durations_ms": [
+    400,
+    410,
+    400,
+    410,
+    400,
+    410,
+    400
+  ],
+  "loop": true,
+  "width": 128,
+  "height": 128
+}

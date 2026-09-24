@@ -1,0 +1,12 @@
+{
+  "name": "dreamlayer",
+  "version": "0.1.0",
+  "description": "Generate and edit images, create logo and product-image concepts, and import sprite animations into game projects.",
+  "author": {
+    "name": "DreamLayer",
+    "email": "Mackenzie@dreamlayer.io"
+  },
+  "homepage": "https://dreamlayer.io/agent",
+  "repository": "https://github.com/TheDesignFounder/dreamlayer-agent-plugin",
+  "license": "MIT"
+}
