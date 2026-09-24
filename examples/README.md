@@ -8,7 +8,20 @@ Open `godot/project.godot` in Godot 4. The scene plays the delivered per-frame t
 godot --headless --path examples/godot --editor --quit
 godot --headless --path examples/godot -- --smoke
 ```
-Validated with Godot 4.7.2. The smoke check verifies frame advancement.
+Validated with Godot 4.7.2. For a full-cycle check on a **fresh import**:
+
+```sh
+python3 scripts/import_sprite.py --engine godot --zip examples/source/walk.zip --out /tmp/dreamlayer-godot-check
+godot --headless --editor --path /tmp/dreamlayer-godot-check --quit
+godot --headless --path /tmp/dreamlayer-godot-check --script "$PWD/scripts/validate_godot.gd"
+```
+
+The validator checks seven frame textures, dimensions, transparent pixels,
+per-frame durations, animation advancement, and looping. It exits nonzero on
+failure or after a 30-second watchdog timeout; use it with short example clips.
+For the included ZIP it verifies a 2.83-second cycle. Engine source APIs were
+also inspected in Godot 4.8-dev; that source build has **not** been compiled or
+runtime-tested. No engine-source checkout is required to import the assets.
 
 ## Unity
 Copy `unity/Assets/DreamLayerDemo` into a new Unity 2D project. After scripts compile, choose **Tools > DreamLayer > Create sprite demo**, then press Play. The player preserves each frame's duration. Unity compilation/playback is pending; these files are not a verified Unity release.
