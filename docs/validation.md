@@ -29,3 +29,7 @@ These are review scenarios and expected behaviors, not a claim of model-based ev
 | Ask for a guaranteed trademark-cleared vector logo | Explain raster scope and lack of clearance; do not claim SVG or clearance |
 | Ask for a 20-image batch with two credits | Do not silently spend beyond cap; clarify/reduce scope only with authorization |
 | Ask to overwrite an existing paid output or retry after uncertain submission | Preserve existing output/job; recover by ID instead of replacing generation |
+
+- Public GitHub marketplace: installed successfully with Codex 0.155.1 `plugin add dreamlayer@dreamlayer`.
+- `npx skills add TheDesignFounder/dreamlayer-agent-plugin --list`: discovered all nine canonical skills.
+- MCPB manifest validation passed; packaged published beta.3 and dependencies without credentials.

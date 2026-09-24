@@ -1,0 +1,19 @@
+{
+  "manifest_version":"0.3",
+  "name":"dreamlayer",
+  "display_name":"DreamLayer image tools",
+  "version":"0.1.0",
+  "description":"Generate and edit images, remove backgrounds, upscale and create reference-based sprite animations.",
+  "author":{"name":"DreamLayer","email":"Mackenzie@dreamlayer.io","url":"https://dreamlayer.io"},
+  "homepage":"https://dreamlayer.io/agent",
+  "documentation":"https://docs.dreamlayer.io/mcp/index",
+  "support":"https://github.com/TheDesignFounder/dreamlayer-mcp/issues",
+  "repository":{"type":"git","url":"https://github.com/TheDesignFounder/dreamlayer-agent-plugin"},
+  "license":"MIT",
+  "privacy_policies":["https://dreamlayer.io/privacy"],
+  "compatibility":{"runtimes":{"node":">=22.12.0"}},
+  "server":{"type":"node","entry_point":"node_modules/@dreamlayer/mcp/dist/index.js","mcp_config":{"command":"node","args":["${__dirname}/node_modules/@dreamlayer/mcp/dist/index.js"],"env":{"DREAMLAYER_API_KEY":"${user_config.api_key}"}}},
+  "user_config":{"api_key":{"type":"string","title":"DreamLayer API key","description":"Create a key at platform.dreamlayer.io. Paid generation uses your API credits.","sensitive":true,"required":true}},
+  "tools_generated":true,
+  "keywords":["image-generation","image-editing","sprites","logo-concepts","product-images","marketing"]
+}
