@@ -12,7 +12,7 @@ Set DREAMLAYER_API_KEY in the environment launching Claude Code. Restart after c
 ## Codex plugin
 ```sh
 codex plugin marketplace add https://github.com/TheDesignFounder/dreamlayer-agent-plugin.git
-codex plugin install dreamlayer@dreamlayer
+codex plugin add dreamlayer@dreamlayer
 ```
 The repository marketplace packages the same nine skills and pinned MCP. OpenAI public directory review is separate. Set DREAMLAYER_API_KEY in the host environment.
 
@@ -48,4 +48,3 @@ Use mcpServers in .gemini/settings.json with command npx and args ["-y","@dreaml
 List tools and read capabilities and balance. These spend nothing. Confirm sprite_sheet is advertised. A stale installed MCP may fail while beta.3 works: update and restart the process. Stable 0.3.0 does not support this full workflow.
 
 Sources: [Cursor](https://cursor.com/docs/skills), [OpenCode](https://opencode.ai/docs/mcp-servers/), [Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).
-
