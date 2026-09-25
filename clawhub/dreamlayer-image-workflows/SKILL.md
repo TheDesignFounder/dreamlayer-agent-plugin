@@ -1,7 +1,7 @@
 ---
 name: dreamlayer-image-workflows
 description: "Produce finished visual assets inside an agent run with DreamLayer: original images, edits of a supplied reference, transparent cutouts, 2x upscales, logo and app-icon directions, ecommerce product and lifestyle imagery, print-artwork concepts, campaign variations, bounded photo batches, and reference-based sprite sheets you can import into Godot. Routes to the canonical DreamLayer workflows and writes outputs into the working directory."
-version: 1.0.2
+version: 1.0.3
 metadata:
   openclaw:
     emoji: "🖼️"
@@ -36,11 +36,11 @@ Node.js 22.12 or later, and a DreamLayer API key from
 ```
 
 Keep the timeout. On a machine that has never run this package, `npx -y` downloads it
-before the server can answer, which measured about 50 seconds on a cold npm cache.
-OpenClaw waits 5 seconds by default and reports the server as failed, so the first
-`openclaw mcp add` or probe fails without `connectionTimeoutMs`. Hosts that use a
-different key for the same idea need the equivalent raised. Later launches are fast,
-and `npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand avoids the wait entirely.
+before the server can answer. Two clean profiles measured that first start at 13 and 50
+seconds; OpenClaw waits 5 seconds by default and reports the server as failed, so the
+first `openclaw mcp add` or probe fails without `connectionTimeoutMs`. Hosts that use a
+different key for the same idea need the equivalent raised. Later launches are fast, and
+`npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand avoids the wait entirely.
 
 Supply the key through the host's secret mechanism. Never place it in a prompt, a commit or a
 skill file. Without it the server exits and says which variable is missing.
