@@ -37,7 +37,7 @@ Nine DreamLayer entries appear under `Project skills:`. `copilot skill disable <
 
 ## Connect the tools
 
-Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://platform.dreamlayer.io/?utm_source=github&utm_medium=agent_distribution&utm_campaign=agent_launch).
+Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://platform.dreamlayer.io).
 
 ```sh
 copilot mcp add dreamlayer --env DREAMLAYER_API_KEY=YOUR_KEY -- npx -y @dreamlayer/mcp@0.4.0-beta.4

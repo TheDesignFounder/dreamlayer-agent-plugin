@@ -12,7 +12,7 @@ npx skills add TheDesignFounder/dreamlayer-agent-plugin
 Choose the workflows you need. The canonical source is `plugins/dreamlayer/skills/`; every host directory is generated from it. Installing skills provides instructions; configure DreamLayer separately with an API key and credits.
 
 ## Connect the tools
-Requires Node.js 22.12 or later. Get your key at [DreamLayer Platform](https://platform.dreamlayer.io/?utm_source=github&utm_medium=agent_distribution&utm_campaign=agent_launch&utm_content=readme).
+Requires Node.js 22.12 or later. Get your key at [DreamLayer Platform](https://platform.dreamlayer.io).
 Use `@dreamlayer/mcp@0.4.0-beta.4` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
 
 See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCode, Gemini CLI and OpenClaw. GitHub Copilot and Cline have their own pages: [Copilot](docs/copilot-setup.md), [Cline](docs/cline-setup.md).
