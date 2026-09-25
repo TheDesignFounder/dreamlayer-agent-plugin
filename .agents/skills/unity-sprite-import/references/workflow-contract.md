@@ -6,7 +6,7 @@ Read the actual tool schema before calling. Never pass fields a client does not 
 ## Setup
 Requires Node.js >=22.12 and a DreamLayer API key from https://platform.dreamlayer.io.
 Install the supported sprite-capable beta: `npm install -g dreamlayer@0.4.0-beta.3`.
-MCP: `npx -y @dreamlayer/mcp@0.4.0-beta.3`. Supply DREAMLAYER_API_KEY to the server process using the host's secret settings. Never commit keys or put them in prompts.
+MCP: `npx -y @dreamlayer/mcp@0.4.0-beta.4`. Supply DREAMLAYER_API_KEY to the server process using the host's secret settings. Never commit keys or put them in prompts.
 The stable npm tag remains 0.3.0. Do not claim it supports this complete workflow.
 
 ## Before paid work
