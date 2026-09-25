@@ -30,6 +30,21 @@ These are review scenarios and expected behaviors, not a claim of model-based ev
 | Ask for a 20-image batch with two credits | Do not silently spend beyond cap; clarify/reduce scope only with authorization |
 | Ask to overwrite an existing paid output or retry after uncertain submission | Preserve existing output/job; recover by ID instead of replacing generation |
 
+## Host discovery, September 25, 2026
+
+Each host ran in a clean isolated profile on Node 24.21.0, with no account and no generation. No credits were spent.
+
+| Host | Command | Result |
+| --- | --- | --- |
+| GitHub Copilot CLI 1.0.88 | `copilot skill list` | Nine project skills from `.github/skills/` |
+| GitHub Copilot CLI 1.0.88 | `copilot mcp add` and `copilot mcp list` | Pinned stdio server registered, key printed masked |
+| Cline CLI 3.0.65 | `cline config skills` | Nine enabled skills from `.cline/skills/` |
+| Cline CLI 3.0.65 | `cline skill add ... -a cline` | Installed the same nine to `.agents/skills/`, listed as Cline skills |
+| Cline CLI 3.0.65 | `cline config mcp` | Pinned stdio server listed from the CLI settings file |
+| OpenCode 1.18.32 | `opencode debug skill` | Nine skills from `.agents/skills/`, alongside its own built-in |
+
+Every host ignored the generated `README.md` in the skills root. Cursor documents the same `.agents/skills/` project path but was not run here, so it stays a documented path rather than a tested one. Cline's own runtime skill loading inside VS Code was not exercised; the CLI reading `.cline/skills/` is the evidence.
+
 - Public GitHub marketplace: installed successfully with Codex 0.155.1 `plugin add dreamlayer@dreamlayer`.
 - `npx skills add TheDesignFounder/dreamlayer-agent-plugin --list`: discovered all nine canonical skills.
 - MCPB manifest validation passed; packaged published beta.3 and dependencies without credentials.

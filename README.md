@@ -9,13 +9,13 @@ Use DreamLayer for logo and app-icon concepts, product imagery, marketing visual
 npx skills add TheDesignFounder/dreamlayer-agent-plugin
 ```
 
-Choose the workflows you need. The canonical source is `.agents/skills/`. Installing skills provides instructions; configure DreamLayer separately with an API key and credits.
+Choose the workflows you need. The canonical source is `plugins/dreamlayer/skills/`; every host directory is generated from it. Installing skills provides instructions; configure DreamLayer separately with an API key and credits.
 
 ## Connect the tools
 Requires Node.js 22.12 or later. Get your key at [DreamLayer Platform](https://platform.dreamlayer.io/?utm_source=github&utm_medium=agent_distribution&utm_campaign=agent_launch&utm_content=readme).
 Use `@dreamlayer/mcp@0.4.0-beta.4` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
 
-See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCode, Copilot and Gemini CLI.
+See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCode, Gemini CLI and OpenClaw. GitHub Copilot and Cline have their own pages: [Copilot](docs/copilot-setup.md), [Cline](docs/cline-setup.md).
 
 ## What you can make
 | Task | Workflow | Output and scope |
@@ -35,7 +35,16 @@ Read capabilities and balance before paid work. Standard image operations curren
 Interrupted work resumes from its saved execution ID. Downloading a completed job does not start a replacement generation. [Workflow contract](docs/workflow-contract.md) · [API documentation](https://docs.dreamlayer.io/agent-api)
 
 ## Maintain one source
-Edit `.agents/skills/`, then run `python3 scripts/build_plugins.py` to regenerate the plugin copies. Run `python3 scripts/validate.py` before publishing. Generated copies must match the canonical skills.
+Edit `plugins/dreamlayer/skills/`, then run `python3 scripts/sync_skills.py` to regenerate every host copy. Run `python3 scripts/validate.py` before publishing; it fails when a copy has drifted.
+
+| Path | Read by |
+| --- | --- |
+| plugins/dreamlayer/skills/ | Claude Code and Codex plugins; the canonical source |
+| .agents/skills/ | Cursor, OpenCode, Copilot, and `npx skills` installs |
+| .github/skills/ | GitHub Copilot in the CLI, VS Code and the coding agent |
+| .cline/skills/ | Cline |
+
+Nothing is symlinked, so the layout survives Windows checkouts and archive downloads.
 
 [Support](mailto:Mackenzie@dreamlayer.io) · [Terms](https://dreamlayer.io/terms) · [Privacy](https://dreamlayer.io/privacy)
 

@@ -21,7 +21,7 @@ The repository marketplace packages the same nine skills and pinned MCP. OpenAI 
 npx skills add TheDesignFounder/dreamlayer-agent-plugin --list
 npx skills add TheDesignFounder/dreamlayer-agent-plugin
 ```
-Select your agent and desired skills. Alternatively copy whole folders from .agents/skills into your project's .agents/skills. References and scripts must travel with SKILL.md.
+Select your agent and desired skills. Alternatively copy whole folders out of this repository into the path your host reads: `.agents/skills/` for Cursor and OpenCode, `.github/skills/` for Copilot, `.cline/skills/` for Cline. All three are generated from `plugins/dreamlayer/skills/` and are byte identical, so pick whichever your host loads. References and scripts must travel with SKILL.md.
 
 ## Cursor
 Use .cursor/mcp.json with a private key supplied through the client's secret configuration. This placeholder is not a working key:
@@ -36,9 +36,21 @@ Use opencode.json:
 ```
 
 ## GitHub Copilot in VS Code
-Use .vscode/mcp.json; the password input keeps the actual key out of source control:
+Full instructions, including the CLI and the `.github/skills/` project path, are in [Copilot setup](copilot-setup.md). Use .vscode/mcp.json; the password input keeps the actual key out of source control:
 ```json
 {"inputs":[{"type":"promptString","id":"dreamlayer-api-key","description":"DreamLayer API key","password":true}],"servers":{"dreamlayer":{"type":"stdio","command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"${input:dreamlayer-api-key}"}}}}
+```
+
+## Cline
+
+Skills live in `.cline/skills/` in the project or `~/.cline/skills/` globally, and the MCP
+server goes in the CLI settings file that `cline config mcp` prints. Full instructions are in
+[Cline setup](cline-setup.md).
+
+```sh
+cline skill add TheDesignFounder/dreamlayer-agent-plugin -a cline -s '*'
+cline config skills
+cline config mcp
 ```
 
 ## Gemini CLI
@@ -65,4 +77,4 @@ removes the wait.
 ## Verify
 List tools and read capabilities and balance. These spend nothing. Confirm sprite_sheet is advertised. A stale installed MCP may fail while the current beta works: update and restart the process. Stable 0.3.0 does not support this full workflow.
 
-Sources: [Cursor](https://cursor.com/docs/skills), [OpenCode](https://opencode.ai/docs/mcp-servers/), [Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).
+Sources: [Cursor](https://cursor.com/docs/context/skills), [OpenCode](https://opencode.ai/docs/skills/), [Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Cline](https://docs.cline.bot/features/skills), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).
