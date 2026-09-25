@@ -1,3 +1,3 @@
 {
-  "mcpServers": {"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.3"]}}
+  "mcpServers": {"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"]}}
 }

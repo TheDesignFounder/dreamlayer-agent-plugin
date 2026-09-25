@@ -13,7 +13,7 @@ Choose the workflows you need. The canonical source is `.agents/skills/`. Instal
 
 ## Connect the tools
 Requires Node.js 22.12 or later. Get your key at [DreamLayer Platform](https://platform.dreamlayer.io/?utm_source=github&utm_medium=agent_distribution&utm_campaign=agent_launch&utm_content=readme).
-Use `@dreamlayer/mcp@0.4.0-beta.3` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
+Use `@dreamlayer/mcp@0.4.0-beta.4` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
 
 See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCode, Copilot and Gemini CLI.
 
