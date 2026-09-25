@@ -74,7 +74,31 @@ openclaw mcp probe dreamlayer
 `mcp probe` should report seven tools. `npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand
 removes the wait.
 
+## Other hosts that read the same files
+
+None of these needs a DreamLayer package of its own. Point the host at a directory this
+repository already generates, or copy one folder.
+
+| Host | What to do | Documented path |
+| --- | --- | --- |
+| Goose | Copy `.agents/skills/` into the project, or into `~/.agents/skills/` for every session | `.agents/skills/<name>/SKILL.md`, its recommended location; `.goose/skills/` and `.claude/skills/` still load |
+| Kilo Code | The same copy; Kilo loads the shared directory by default | `.agents/skills/` and `~/.agents/skills/`, or its own `.kilo/skills/` |
+| DeepSeek Harness | The same copy; it ranks a project's `.agents/skills` second, after `.dsh/skills` | `.agents/skills/<name>/SKILL.md` or `.dsh/skills/<name>/SKILL.md` |
+| Qwen Code | Copy into `.qwen/skills/`; it reads no shared directory | `.qwen/skills/<name>/SKILL.md` or `~/.qwen/skills/` |
+| Aider | No skill loading. Use a conventions file and read it in | `CONVENTIONS.md` through `--read` |
+| Continue | No skill loading. Its rules are always on rather than loaded on demand | `.continue/rules/` |
+
+```sh
+cp -R dreamlayer-agent-plugin/.agents/skills/. your-project/.agents/skills/
+cp -R dreamlayer-agent-plugin/.agents/skills/. your-project/.qwen/skills/
+```
+
+Each host still needs the MCP server configured its own way, with the key supplied through
+that host's own secret settings. Checked on September 25, 2026 against each host's own
+documentation. None of these six was run here, unlike the hosts in the
+[validation record](validation.md).
+
 ## Verify
 List tools and read capabilities and balance. These spend nothing. Confirm sprite_sheet is advertised. A stale installed MCP may fail while the current beta works: update and restart the process. Stable 0.3.0 does not support this full workflow.
 
-Sources: [Cursor](https://cursor.com/docs/context/skills), [OpenCode](https://opencode.ai/docs/skills/), [Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Cline](https://docs.cline.bot/features/skills), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).
+Sources: [Cursor](https://cursor.com/docs/context/skills), [OpenCode](https://opencode.ai/docs/skills/), [Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Cline](https://docs.cline.bot/features/skills), [Goose](https://goose-docs.ai/docs/guides/context-engineering/using-skills/), [Kilo Code](https://kilo.ai/docs/customize/skills), [Qwen Code](https://qwenlm.github.io/qwen-code-docs/en/users/features/skills/), [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/skills.md), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).

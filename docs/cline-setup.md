@@ -54,7 +54,7 @@ For the CLI, add the server to `~/.cline/data/settings/cline_mcp_settings.json`.
 
 In the IDE extension, open the MCP Servers icon, then Configure, then Configure MCP Servers, and add the same entry.
 
-That file sits outside your repository. Keep the key out of the project, out of prompts and out of commits, and rotate it on the platform if it reaches any of them. Leave `autoApprove` empty so each paid call is reviewed; only the read-only tools below are safe to approve in advance.
+That file sits outside your repository, and it holds the key in plain text. It is not created with restricted permissions, so run `chmod 600` on it if anyone else has an account on the machine. Keep the key out of the project, out of prompts and out of commits, and rotate it on the platform if it reaches any of them. Leave `autoApprove` empty so each paid call is reviewed; only the read-only tools below are safe to approve in advance.
 
 The `timeout` value matters on a machine that has never run the package: `npx -y` downloads it first, measured at 13 to 50 seconds across two clean profiles. Install it ahead of time with `npm i -g @dreamlayer/mcp@0.4.0-beta.4` to remove the wait.
 
