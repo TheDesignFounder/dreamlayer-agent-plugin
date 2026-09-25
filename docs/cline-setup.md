@@ -44,7 +44,7 @@ because plain `cline config` opens an interactive view and needs a terminal. In 
 
 ## Connect the tools
 
-Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://platform.dreamlayer.io).
+Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://platform.dreamlayer.io). What DreamLayer does, and what it costs, is on the [product page](https://dreamlayer.io/agent?utm_source=cline&utm_medium=agent_distribution&utm_campaign=agent_launch_202609).
 
 For the CLI, add the server to `~/.cline/data/settings/cline_mcp_settings.json`. Run `cline config mcp` to print the exact path your build uses and to list what is configured.
 
