@@ -59,8 +59,13 @@ The skills call the DreamLayer MCP server. Add it to Hermes the same way you add
 stdio MCP server, and give the key to the server process rather than your shell:
 
 ```json
-{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"}}}}
+{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"},"connectionTimeoutMs":90000}}}
 ```
+
+The timeout matters on a first run: `npx -y` downloads the package before the server
+answers, about 50 seconds on a cold npm cache, and a host that waits only a few seconds
+will call the server dead. Raise whichever key your host uses, or install the package
+first with `npm i -g @dreamlayer/mcp@0.4.0-beta.4`.
 
 Create the key at [platform.dreamlayer.io](https://platform.dreamlayer.io). Node.js 22.12 or
 later is required. Without the key the server exits and names the missing variable.

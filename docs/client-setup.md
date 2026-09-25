@@ -44,7 +44,24 @@ Use .vscode/mcp.json; the password input keeps the actual key out of source cont
 ## Gemini CLI
 Use mcpServers in .gemini/settings.json with command npx and args ["-y","@dreamlayer/mcp@0.4.0-beta.4"]. Supply DREAMLAYER_API_KEY through the process environment or private user settings.
 
+## OpenClaw
+
+Install the published skill, then add the server. The timeout is not optional on a machine
+that has never run the package: `npx -y` downloads it first, about 50 seconds on a cold npm
+cache, while OpenClaw waits 5 seconds by default and reports the server as failed.
+
+```sh
+openclaw skills install @thedesignfounder/dreamlayer-image-workflows
+openclaw config set skills.entries.dreamlayer-image-workflows.apiKey YOUR_KEY
+openclaw mcp add dreamlayer --command npx --arg "-y" --arg "@dreamlayer/mcp@0.4.0-beta.4" \
+  --env "DREAMLAYER_API_KEY=YOUR_KEY" --connect-timeout 90
+openclaw mcp probe dreamlayer
+```
+
+`mcp probe` should report seven tools. `npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand
+removes the wait.
+
 ## Verify
-List tools and read capabilities and balance. These spend nothing. Confirm sprite_sheet is advertised. A stale installed MCP may fail while beta.3 works: update and restart the process. Stable 0.3.0 does not support this full workflow.
+List tools and read capabilities and balance. These spend nothing. Confirm sprite_sheet is advertised. A stale installed MCP may fail while the current beta works: update and restart the process. Stable 0.3.0 does not support this full workflow.
 
 Sources: [Cursor](https://cursor.com/docs/skills), [OpenCode](https://opencode.ai/docs/mcp-servers/), [Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), [Gemini](https://geminicli.com/docs/cli/skills/), [Codex](https://developers.openai.com/plugins/build/plugins).
