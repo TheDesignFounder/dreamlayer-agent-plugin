@@ -47,8 +47,9 @@ Use mcpServers in .gemini/settings.json with command npx and args ["-y","@dreaml
 ## OpenClaw
 
 Install the published skill, then add the server. The timeout is not optional on a machine
-that has never run the package: `npx -y` downloads it first, about 50 seconds on a cold npm
-cache, while OpenClaw waits 5 seconds by default and reports the server as failed.
+that has never run the package: `npx -y` downloads it first, measured at 13 to 50 seconds
+across two clean profiles, while OpenClaw waits 5 seconds by default and reports the server
+as failed.
 
 ```sh
 openclaw skills install @thedesignfounder/dreamlayer-image-workflows
