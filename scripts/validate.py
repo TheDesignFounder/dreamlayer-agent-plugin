@@ -28,6 +28,10 @@ assert '@dreamlayer/mcp@0.4.0-beta.4' in text and '0.4.0-beta.3' not in text
 assert 'dreamlayer_cancel' not in text
 for folder in skills:
     assert folder.name in text, f'ClawHub entry point does not route to {folder.name}'
+spec=importlib.util.spec_from_file_location('skills_package',ROOT/'packaging/openai/build_skills_package.py')
+skills_package=importlib.util.module_from_spec(spec);spec.loader.exec_module(skills_package)
+assert skills_package.PACKAGE.exists(),'the OpenAI skills package is missing; run packaging/openai/build_skills_package.py'
+assert skills_package.PACKAGE.read_bytes()==skills_package.build(),'the OpenAI skills package has drifted from the canonical skills'
 for doc in ('docs/copilot-setup.md','docs/cline-setup.md'):
     body=(ROOT/doc).read_text()
     for folder in skills:
