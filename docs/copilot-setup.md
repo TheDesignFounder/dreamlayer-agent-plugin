@@ -44,7 +44,7 @@ copilot mcp add dreamlayer --env DREAMLAYER_API_KEY=YOUR_KEY -- npx -y @dreamlay
 copilot mcp list
 ```
 
-The entry lands in `~/.copilot/mcp-config.json`, outside your repository, and Copilot masks the value when it prints the server. A workspace-level `.mcp.json` or `.github/mcp.json` works too, but those files are committed, so keep the key out of them. In VS Code use `.vscode/mcp.json` with a `promptString` input, as shown in [client setup](client-setup.md).
+The entry lands in `~/.copilot/mcp-config.json`, outside your repository. Copilot masks the value when it prints the server, but that file holds the key in plain text; it is created readable only by your own account. A workspace-level `.mcp.json` or `.github/mcp.json` works too, but those files are committed, so keep the key out of them. In VS Code use `.vscode/mcp.json` with a `promptString` input, as shown in [client setup](client-setup.md).
 
 Never paste the key into a prompt, a skill file or a commit. Rotate it on the platform if it reaches any of those.
 
