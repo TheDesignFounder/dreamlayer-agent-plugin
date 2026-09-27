@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "dreamlayer",
   "display_name": "DreamLayer image tools",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Generate and edit images, remove backgrounds, upscale and create reference-based sprite animations.",
   "author": {
     "name": "DreamLayer",

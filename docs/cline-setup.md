@@ -49,14 +49,14 @@ Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://pla
 For the CLI, add the server to `~/.cline/data/settings/cline_mcp_settings.json`. Run `cline config mcp` to print the exact path your build uses and to list what is configured.
 
 ```json
-{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"},"disabled":false,"autoApprove":[],"timeout":120}}}
+{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.5"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"},"disabled":false,"autoApprove":[],"timeout":120}}}
 ```
 
 In the IDE extension, open the MCP Servers icon, then Configure, then Configure MCP Servers, and add the same entry.
 
 That file sits outside your repository, and it holds the key in plain text. It is not created with restricted permissions, so run `chmod 600` on it if anyone else has an account on the machine. Keep the key out of the project, out of prompts and out of commits, and rotate it on the platform if it reaches any of them. Leave `autoApprove` empty so each paid call is reviewed; only the read-only tools below are safe to approve in advance.
 
-The `timeout` value matters on a machine that has never run the package: `npx -y` downloads it first, measured at 13 to 50 seconds across two clean profiles. Install it ahead of time with `npm i -g @dreamlayer/mcp@0.4.0-beta.4` to remove the wait.
+The `timeout` value matters on a machine that has never run the package: `npx -y` downloads it first, measured at 13 to 50 seconds across two clean profiles. Install it ahead of time with `npm i -g @dreamlayer/mcp@0.4.0-beta.5` to remove the wait.
 
 ## The seven tools
 

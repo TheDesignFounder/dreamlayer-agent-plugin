@@ -40,7 +40,7 @@ Nine DreamLayer entries appear under `Project skills:`. `copilot skill disable <
 Requires Node.js 22.12 or later and a key from [DreamLayer Platform](https://platform.dreamlayer.io). What DreamLayer does, and what it costs, is on the [product page](https://dreamlayer.io/agent?utm_source=github_copilot&utm_medium=agent_distribution&utm_campaign=agent_launch_202609).
 
 ```sh
-copilot mcp add dreamlayer --env DREAMLAYER_API_KEY=YOUR_KEY -- npx -y @dreamlayer/mcp@0.4.0-beta.4
+copilot mcp add dreamlayer --env DREAMLAYER_API_KEY=YOUR_KEY -- npx -y @dreamlayer/mcp@0.4.0-beta.5
 copilot mcp list
 ```
 
@@ -48,7 +48,7 @@ The entry lands in `~/.copilot/mcp-config.json`, outside your repository. Copilo
 
 Never paste the key into a prompt, a skill file or a commit. Rotate it on the platform if it reaches any of those.
 
-The first run downloads the package. On a machine that has never run it, allow 13 to 50 seconds before deciding the server failed, or install it ahead of time with `npm i -g @dreamlayer/mcp@0.4.0-beta.4`.
+The first run downloads the package. On a machine that has never run it, allow 13 to 50 seconds before deciding the server failed, or install it ahead of time with `npm i -g @dreamlayer/mcp@0.4.0-beta.5`.
 
 ## The seven tools
 

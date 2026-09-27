@@ -32,7 +32,7 @@ Node.js 22.12 or later, and a DreamLayer API key from
 [platform.dreamlayer.io](https://platform.dreamlayer.io).
 
 ```json
-{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"},"connectionTimeoutMs":90000}}}
+{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.5"],"env":{"DREAMLAYER_API_KEY":"YOUR_KEY"},"connectionTimeoutMs":90000}}}
 ```
 
 Keep the timeout. On a machine that has never run this package, `npx -y` downloads it
@@ -40,7 +40,7 @@ before the server can answer. Two clean profiles measured that first start at 13
 seconds; OpenClaw waits 5 seconds by default and reports the server as failed, so the
 first `openclaw mcp add` or probe fails without `connectionTimeoutMs`. Hosts that use a
 different key for the same idea need the equivalent raised. Later launches are fast, and
-`npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand avoids the wait entirely.
+`npm i -g @dreamlayer/mcp@0.4.0-beta.5` beforehand avoids the wait entirely.
 
 Supply the key through the host's secret mechanism. Never place it in a prompt, a commit or a
 skill file. Without it the server exits and says which variable is missing.
