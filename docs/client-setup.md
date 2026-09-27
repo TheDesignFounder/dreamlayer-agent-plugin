@@ -26,19 +26,19 @@ Select your agent and desired skills. Alternatively copy whole folders out of th
 ## Cursor
 Use .cursor/mcp.json with a private key supplied through the client's secret configuration. This placeholder is not a working key:
 ```json
-{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"YOUR_PRIVATE_API_KEY"}}}}
+{"mcpServers":{"dreamlayer":{"command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.5"],"env":{"DREAMLAYER_API_KEY":"YOUR_PRIVATE_API_KEY"}}}}
 ```
 
 ## OpenCode
 Use opencode.json:
 ```json
-{"$schema":"https://opencode.ai/config.json","mcp":{"dreamlayer":{"type":"local","command":["npx","-y","@dreamlayer/mcp@0.4.0-beta.4"],"environment":{"DREAMLAYER_API_KEY":"{env:DREAMLAYER_API_KEY}"},"enabled":true}}}
+{"$schema":"https://opencode.ai/config.json","mcp":{"dreamlayer":{"type":"local","command":["npx","-y","@dreamlayer/mcp@0.4.0-beta.5"],"environment":{"DREAMLAYER_API_KEY":"{env:DREAMLAYER_API_KEY}"},"enabled":true}}}
 ```
 
 ## GitHub Copilot in VS Code
 Full instructions, including the CLI and the `.github/skills/` project path, are in [Copilot setup](copilot-setup.md). Use .vscode/mcp.json; the password input keeps the actual key out of source control:
 ```json
-{"inputs":[{"type":"promptString","id":"dreamlayer-api-key","description":"DreamLayer API key","password":true}],"servers":{"dreamlayer":{"type":"stdio","command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.4"],"env":{"DREAMLAYER_API_KEY":"${input:dreamlayer-api-key}"}}}}
+{"inputs":[{"type":"promptString","id":"dreamlayer-api-key","description":"DreamLayer API key","password":true}],"servers":{"dreamlayer":{"type":"stdio","command":"npx","args":["-y","@dreamlayer/mcp@0.4.0-beta.5"],"env":{"DREAMLAYER_API_KEY":"${input:dreamlayer-api-key}"}}}}
 ```
 
 ## Cline
@@ -54,7 +54,7 @@ cline config mcp
 ```
 
 ## Gemini CLI
-Use mcpServers in .gemini/settings.json with command npx and args ["-y","@dreamlayer/mcp@0.4.0-beta.4"]. Supply DREAMLAYER_API_KEY through the process environment or private user settings.
+Use mcpServers in .gemini/settings.json with command npx and args ["-y","@dreamlayer/mcp@0.4.0-beta.5"]. Supply DREAMLAYER_API_KEY through the process environment or private user settings.
 
 ## OpenClaw
 
@@ -66,12 +66,12 @@ as failed.
 ```sh
 openclaw skills install @thedesignfounder/dreamlayer-image-workflows
 openclaw config set skills.entries.dreamlayer-image-workflows.apiKey YOUR_KEY
-openclaw mcp add dreamlayer --command npx --arg "-y" --arg "@dreamlayer/mcp@0.4.0-beta.4" \
+openclaw mcp add dreamlayer --command npx --arg "-y" --arg "@dreamlayer/mcp@0.4.0-beta.5" \
   --env "DREAMLAYER_API_KEY=YOUR_KEY" --connect-timeout 90
 openclaw mcp probe dreamlayer
 ```
 
-`mcp probe` should report seven tools. `npm i -g @dreamlayer/mcp@0.4.0-beta.4` beforehand
+`mcp probe` should report seven tools. `npm i -g @dreamlayer/mcp@0.4.0-beta.5` beforehand
 removes the wait.
 
 ## Other hosts that read the same files

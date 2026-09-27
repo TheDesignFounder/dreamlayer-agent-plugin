@@ -18,13 +18,13 @@ for folder in skills:
 for path in ROOT.rglob('*.json'):
     if 'node_modules' not in path.parts: json.loads(path.read_text())
 config=json.loads((ROOT/'plugins/dreamlayer/.mcp.json').read_text())
-assert config['mcpServers']['dreamlayer']['args']==['-y','@dreamlayer/mcp@0.4.0-beta.4']
+assert config['mcpServers']['dreamlayer']['args']==['-y','@dreamlayer/mcp@0.4.0-beta.5']
 assert len(skills)==9
 
 clawhub=ROOT/'clawhub/dreamlayer-image-workflows/SKILL.md'
 text=clawhub.read_text()
 assert text.startswith('---\n') and 'name: dreamlayer-image-workflows\n' in text
-assert '@dreamlayer/mcp@0.4.0-beta.4' in text and '0.4.0-beta.3' not in text
+assert '@dreamlayer/mcp@0.4.0-beta.5' in text and 'dreamlayer@0.4.0-beta.4' not in text
 assert 'dreamlayer_cancel' not in text
 for folder in skills:
     assert folder.name in text, f'ClawHub entry point does not route to {folder.name}'
@@ -36,6 +36,6 @@ for doc in ('docs/copilot-setup.md','docs/cline-setup.md'):
     body=(ROOT/doc).read_text()
     for folder in skills:
         assert folder.name in body, f'{doc} does not list {folder.name}'
-    assert '@dreamlayer/mcp@0.4.0-beta.4' in body and 'Unity' in body
+    assert '@dreamlayer/mcp@0.4.0-beta.5' in body and 'Unity' in body
 print(f'PASS: {len(skills)} skills, valid JSON/links, pinned MCP, host copies identical to '
       f'{sync_skills.CANONICAL} ({", ".join(sync_skills.MIRRORS)}), ClawHub and host docs route to all of them')

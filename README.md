@@ -13,7 +13,7 @@ Choose the workflows you need. The canonical source is `plugins/dreamlayer/skill
 
 ## Connect the tools
 Requires Node.js 22.12 or later. Get your key at [DreamLayer Platform](https://platform.dreamlayer.io).
-Use `@dreamlayer/mcp@0.4.0-beta.4` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
+Use `@dreamlayer/mcp@0.4.0-beta.5` for this full workflow set. The stable 0.3.0 tag does not cover sprites.
 
 See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCode, Gemini CLI and OpenClaw. GitHub Copilot and Cline have their own pages: [Copilot](docs/copilot-setup.md), [Cline](docs/cline-setup.md).
 
