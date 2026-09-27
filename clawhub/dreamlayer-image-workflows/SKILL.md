@@ -1,7 +1,7 @@
 ---
 name: dreamlayer-image-workflows
 description: "Produce finished visual assets inside an agent run with DreamLayer: original images, edits of a supplied reference, transparent cutouts, 2x upscales, logo and app-icon directions, ecommerce product and lifestyle imagery, print-artwork concepts, campaign variations, bounded photo batches, and reference-based sprite sheets you can import into Godot. Routes to the canonical DreamLayer workflows and writes outputs into the working directory."
-version: 1.0.3
+version: 1.0.4
 metadata:
   openclaw:
     emoji: "🖼️"
