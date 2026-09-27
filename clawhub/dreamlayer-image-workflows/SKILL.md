@@ -104,7 +104,10 @@ output acceptance.
 Ordinary completed image operations currently cost one credit each; read the live figure from
 capabilities rather than assuming. Sprite jobs are a beta with frame-based pricing: read
 `sprite_pricing`, round the whole quote up once to a tenth of a credit, and pass it as
-`max_credits`. Sprite jobs cannot be cancelled by the customer; failed or expired jobs restore
+`max_credits`. Transparent frames use the tier in `first_tier_cents` and
+`additional_frame_cents`; a sheet that keeps its background costs the flat
+`plain_frame_cents` per frame, roughly half, and is ordered with `background: "keep"` by a
+client that exposes the field. Sprite jobs cannot be cancelled by the customer; failed or expired jobs restore
 the hold.
 
 Stop, keep the recoverable state, and report rather than looping paid retries when you hit:
