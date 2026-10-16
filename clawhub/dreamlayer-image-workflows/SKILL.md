@@ -72,6 +72,7 @@ under `plugins/dreamlayer/skills/`. Read the matching one and follow it rather t
 | A bounded batch of the same edit across several photos | `batch-photo-editing` |
 | A sprite sheet from one reference | `sprite-sheet-from-reference` |
 | Importing a finished sprite ZIP into Godot 4 | `godot-sprite-import` |
+| Integrating game artwork without changing mechanics | `integrate-game-art` |
 | Preparing a sprite ZIP for Unity 2D | `unity-sprite-import` |
 
 All of them share one contract: [`docs/workflow-contract.md`](https://github.com/TheDesignFounder/dreamlayer-agent-plugin/blob/main/docs/workflow-contract.md).

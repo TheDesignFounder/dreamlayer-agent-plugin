@@ -4,7 +4,7 @@ Use DreamLayer when a task needs actual image files: an original image, a raster
 
 ## Install the skills
 
-This repository already carries the nine workflows in `.github/skills/`, which Copilot reads as project skills. Copilot also reads `.agents/skills/` and `.claude/skills/`, and this repository generates `.agents/skills/` from the same source.
+This repository already carries the ten workflows in `.github/skills/`, which Copilot reads as project skills. Copilot also reads `.agents/skills/` and `.claude/skills/`, and this repository generates `.agents/skills/` from the same source.
 
 ```sh
 git clone https://github.com/TheDesignFounder/dreamlayer-agent-plugin.git
@@ -19,9 +19,9 @@ Confirm discovery from your project root:
 copilot skill list
 ```
 
-Nine DreamLayer entries appear under `Project skills:`. `copilot skill disable <name>` hides one you do not want.
+Ten DreamLayer entries appear under `Project skills:`. `copilot skill disable <name>` hides one you do not want.
 
-## The nine workflows
+## The ten workflows
 
 | Workflow | Makes |
 | --- | --- |
@@ -33,6 +33,7 @@ Nine DreamLayer entries appear under `Project skills:`. `copilot skill disable <
 | batch-photo-editing | One edit, cutout or upscale applied across a list of files, with a budget |
 | sprite-sheet-from-reference | A sprite-sheet ZIP of transparent frames, atlas and preview |
 | godot-sprite-import | A runnable Godot 4 demo from a downloaded sprite ZIP |
+| integrate-game-art | Integrate game artwork while preserving mechanics; includes a free browser example |
 | unity-sprite-import | Unity 2D import files and a frame player from a downloaded sprite ZIP |
 
 ## Connect the tools
@@ -83,4 +84,4 @@ Sprite output is beta. A PNG does not establish vector structure, pixel-perfect 
 
 ## Validated
 
-GitHub Copilot CLI 1.0.88 listed all nine workflows from `.github/skills/` in a clean profile with no sign-in, and `copilot mcp add` plus `copilot mcp list` registered the pinned server with the key masked in the output. No generation was run and no credits were spent.
+GitHub Copilot CLI 1.0.88 listed all ten workflows from `.github/skills/` in a clean profile with no sign-in, and `copilot mcp add` plus `copilot mcp list` registered the pinned server with the key masked in the output. No generation was run and no credits were spent.
