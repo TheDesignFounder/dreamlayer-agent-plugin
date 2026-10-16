@@ -52,6 +52,6 @@ Nothing is symlinked, so the layout survives Windows checkouts and archive downl
 
 ## Playable example
 
-[Relay garden](https://github.com/TheDesignFounder/dreamlayer-game-assets) combines a real REA CLI investigation of a controlled minified game with reused DreamLayer robot artwork. Play with bundled files, compare geometry and artwork, and reproduce the movement tests without credits.
+[Relay garden](https://github.com/TheDesignFounder/dreamlayer-game-assets) combines a real REA CLI investigation of a controlled minified game with an original DreamLayer environment and six matching game objects. The art pass used three credits; play with bundled files, compare geometry and artwork, and reproduce the movement tests without credits.
 
 Install the companion workflow with `npx skills add TheDesignFounder/dreamlayer-agent-plugin --skill integrate-game-art`. REA is optional for ordinary artwork tasks.

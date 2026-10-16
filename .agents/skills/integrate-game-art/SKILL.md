@@ -50,7 +50,7 @@ historical costs separately from new charges, and any unverified behavior.
 ## Runnable example, no paid calls
 
 The [Relay garden example](https://github.com/TheDesignFounder/dreamlayer-game-assets)
-bundles DreamLayer robot frames and a geometry mode. With Node.js 22.19+ on the 22.x line (or another REA-supported version):
+bundles an original DreamLayer environment, six matching game objects, and a geometry mode. With Node.js 22.19+ on the 22.x line (or another REA-supported version):
 
 ```sh
 git clone https://github.com/TheDesignFounder/dreamlayer-game-assets.git
