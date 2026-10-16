@@ -19,7 +19,7 @@ for path in ROOT.rglob('*.json'):
     if 'node_modules' not in path.parts: json.loads(path.read_text())
 config=json.loads((ROOT/'plugins/dreamlayer/.mcp.json').read_text())
 assert config['mcpServers']['dreamlayer']['args']==['-y','@dreamlayer/mcp@0.4.0-beta.5']
-assert len(skills)==9
+assert len(skills)==10
 
 clawhub=ROOT/'clawhub/dreamlayer-image-workflows/SKILL.md'
 text=clawhub.read_text()

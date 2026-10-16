@@ -27,6 +27,7 @@ See [client setup](docs/client-setup.md) for Claude Code, Codex, Cursor, OpenCod
 | Ads and social posts | marketing-image-variations | Creative files, no ad publishing |
 | Repeated photo operations | batch-photo-editing | Per-file jobs with a total budget |
 | Sprite animations | sprite-sheet-from-reference | Beta ZIP, PNG frames, atlas and preview |
+| Game artwork integration | integrate-game-art | Asset plan, provenance, baseline/art comparison, browser verification |
 | Godot / Unity | godot-sprite-import / unity-sprite-import | Local engine import examples |
 
 ## Cost and recovery
@@ -48,3 +49,9 @@ Nothing is symlinked, so the layout survives Windows checkouts and archive downl
 
 [Support](mailto:Mackenzie@dreamlayer.io) · [Terms](https://dreamlayer.io/terms) · [Privacy](https://dreamlayer.io/privacy)
 
+
+## Playable example
+
+[Relay garden](https://github.com/TheDesignFounder/dreamlayer-game-assets) combines a real REA CLI investigation of a controlled minified game with an original DreamLayer environment and six matching game objects. The art pass used three credits; play with bundled files, compare geometry and artwork, and reproduce the movement tests without credits.
+
+Install the companion workflow with `npx skills add TheDesignFounder/dreamlayer-agent-plugin --skill integrate-game-art`. REA is optional for ordinary artwork tasks.

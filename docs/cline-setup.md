@@ -4,7 +4,7 @@ Use DreamLayer when a task needs actual image files: an original image, a raster
 
 ## Install the skills
 
-This repository carries the nine workflows in `.cline/skills/`, the project path Cline recommends and expects teams to commit.
+This repository carries the ten workflows in `.cline/skills/`, the project path Cline recommends and expects teams to commit.
 
 ```sh
 git clone https://github.com/TheDesignFounder/dreamlayer-agent-plugin.git
@@ -25,10 +25,10 @@ Confirm discovery from your project root:
 cline config skills
 ```
 
-Nine DreamLayer entries appear under `Enabled skills:` with their paths. Pass the section name,
+Ten DreamLayer entries appear under `Enabled skills:` with their paths. Pass the section name,
 because plain `cline config` opens an interactive view and needs a terminal. In the IDE extension, open the Skills tab from the scale icon at the bottom of the Cline panel.
 
-## The nine workflows
+## The ten workflows
 
 | Workflow | Makes |
 | --- | --- |
@@ -40,6 +40,7 @@ because plain `cline config` opens an interactive view and needs a terminal. In 
 | batch-photo-editing | One edit, cutout or upscale applied across a list of files, with a budget |
 | sprite-sheet-from-reference | A sprite-sheet ZIP of transparent frames, atlas and preview |
 | godot-sprite-import | A runnable Godot 4 demo from a downloaded sprite ZIP |
+| integrate-game-art | Integrate game artwork while preserving mechanics; includes a free browser example |
 | unity-sprite-import | Unity 2D import files and a frame player from a downloaded sprite ZIP |
 
 ## Connect the tools
@@ -93,4 +94,4 @@ Sprite output is beta. A PNG does not establish vector structure, pixel-perfect 
 
 ## Validated
 
-Cline CLI 3.0.65 reported all nine workflows under `Enabled skills:` from `.cline/skills/` in a clean profile, with the generated README ignored, `cline skill add` installed the same nine to `.agents/skills/` and listed them as Cline skills, and `cline config mcp` listed the pinned stdio server after the settings file was written. No generation was run and no credits were spent.
+Cline CLI 3.0.65 reported all ten workflows under `Enabled skills:` from `.cline/skills/` in a clean profile, with the generated README ignored, `cline skill add` installed the same nine to `.agents/skills/` and listed them as Cline skills, and `cline config mcp` listed the pinned stdio server after the settings file was written. No generation was run and no credits were spent.
